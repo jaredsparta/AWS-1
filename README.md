@@ -20,15 +20,16 @@
 
 - To open a port to your IP, you will need to either create a new security group or change an existing one. Inside it, you can specify which type of connection you can allow. For example, `HTTP` will by default use port 80 and `SSH` uses port 22.
 
-- To open a specific port to your IP you will need to choose a `Type`. For specific ports you can use `Custom TCP` and input the port you want. Finally, in `Source Type` you can select `My IP`.
+- To open a specific port to your IP you will need to choose a `Type` that matches a known port number already or, for specific ports, you can choose `Custom TCP` and input the port you want. Finally, in `Source Type` you can select `My IP`.
 
-- To open ports to the world, you will need to specify the `Source` as `0.0.0.0`
+- To open ports for any IPv4 address, you will need to specify the `Source` as `0.0.0.0/0`
 
 <br>
 
 ## Why should we not have port 22 open to all IP's?
-- Port 22 is the default port used for secure logins. If you leave it open for the world, you will allow anyone the chance to access it. So if they the correct key and know the related IP they will be able to SSH into your instance and change it however they like.
+- Port 22 is the default port used for secure logins. If you leave it open for the world, you will allow anyone in the world the chance to attempt to log in. Essentially, if they have the correct key and know the related IP they will be able to SSH into your instance and change it however they like.
 
+- Although this might not seem too catastrophic (as you possess the only key which is safe in your hard drive), it could pose a threat in cases where the key might leak unknowingly and someone in the world accesses your server and destroys all the data on it (and you would have no way of knowing who it was). By limiting port 22 access to known IP's only, you will reduce the possibility of such events from happening by a signigcant margin.
 
 <br>
 
