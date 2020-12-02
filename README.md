@@ -27,7 +27,8 @@
 <br>
 
 ## Why should we not have port 22 open to all IP's?
-- Port 22 is the default port used for secure logins. If you leave it open for the world, you will be allowing access of it to anyone. They can then change it however they feel, which is extremely dangerous.
+- Port 22 is the default port used for secure logins. If you leave it open for the world, you will allow anyone the chance to access it. So if they the correct key and know the related IP they will be able to SSH into your instance and change it however they like.
+
 
 <br>
 
@@ -92,6 +93,7 @@ server {
 
 - Finally, we need to restart nginx using `sudo systemctl restart nginx`
 
+<br>
 
 ## What you should get
 
