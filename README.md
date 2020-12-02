@@ -51,16 +51,18 @@ ssh -i path-to-pem-file ubuntu@ip-address
 ## How can you send a file into a remote server
 - We can use a program called `scp` or 'Secure Copy`.
 
-- Within our host machine, if we wanted to copy over a file into our instance, we can use the first line while copying over a directory requires us to do so recursively as in the second line.
+- Within our host machine, if we wanted to copy over a file into our instance, we can use the first line while copying over a directory requires us to do so recursively as in the second line. Finally we can also send multiple files at once, it is just the same syntax but add multiple files, as shown in the third line
 
 ```bash
 $ scp -i path-to-pem-file path-to-file user@remoteip:/path/file2
 $ scp -i path-to-pem-file -r path-to-directory user@remoteip:/path/file2
+$ scp -i path-to-pem-file path-to-file1 path-to-file2 path-to-file3 user@remoteip:/path/file2
 ```
 > For a file example `scp -i ~/.ssh provision.sh ubuntu:192.168.10.100`
 
 > For a directory example `scp -i ~/.ssh -r ./app ubuntu:192.168.10.100`
 
+> For a multiple files example `scp -i ~/.ssh provision1.sh provision2.sh ubuntu:192.168.10.100`
 <br>
 
 ## General outline to get the app working
