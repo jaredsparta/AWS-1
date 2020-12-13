@@ -60,11 +60,11 @@ $ scp -i path-to-pem-file path-to-file user@remoteip:/path/file2
 $ scp -i path-to-pem-file -r path-to-directory user@remoteip:/path/file2
 $ scp -i path-to-pem-file path-to-file1 path-to-file2 path-to-file3 user@remoteip:/path/file2
 ```
-> For a file example `scp -i ~/.ssh provision.sh ubuntu:192.168.10.100`
+> For a file example `scp -i ~/.ssh provision.sh ubuntu:192.168.10.100:~/`
 
-> For a directory example `scp -i ~/.ssh -r ./app ubuntu:192.168.10.100`
+> For a directory example `scp -i ~/.ssh -r ./app ubuntu:192.168.10.100:~/`
 
-> For a multiple files example `scp -i ~/.ssh provision1.sh provision2.sh ubuntu:192.168.10.100`
+> For a multiple files example `scp -i ~/.ssh provision1.sh provision2.sh ubuntu:192.168.10.100:~/`
 <br>
 
 ## General outline to get the app working
